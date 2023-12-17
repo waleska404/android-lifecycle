@@ -15,3 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidLifecycle"
 include(":app")
+include(":feature:activity")
+include(":core:util")
+include(":feature:home")
