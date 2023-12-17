@@ -1,4 +1,4 @@
-package com.waleska404.activity
+package com.waleska404.activity.create
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
