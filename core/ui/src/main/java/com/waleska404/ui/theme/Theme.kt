@@ -1,4 +1,4 @@
-package com.waleska404.androidlifecycle.ui.theme
+package com.waleska404.ui.theme
 
 import android.app.Activity
 import android.os.Build

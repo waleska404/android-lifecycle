@@ -71,6 +71,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
 
     implementation(project(":core:util"))
+    implementation(project(":core:ui"))
     implementation(project(":feature:home"))
     implementation(project(":feature:activity"))
 }
