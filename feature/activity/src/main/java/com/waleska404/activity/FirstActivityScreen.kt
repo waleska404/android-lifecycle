@@ -16,8 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FirstActivityScreen()
-{
+fun FirstActivityScreen(
+    getActivity2Text: () -> String,
+    onResetClicked: () -> Unit,
+    onGoToActivity2Clicked: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -31,8 +34,10 @@ fun FirstActivityScreen()
         Spacer(modifier = Modifier.height(22.dp))
         Text(text = "State:")
         Text(text = "Activity 1: CREATED")
-        Text(text = "Activity 2: DESTROYED")
-        
+
+        val activityTwoText = getActivity2Text()
+        Text(text = "Activity 2: $activityTwoText")
+
         Button(
             onClick = { /*TODO*/ }
         ) {
