@@ -34,17 +34,14 @@ fun FirstActivityScreen(
         Spacer(modifier = Modifier.height(22.dp))
         Text(text = "State:")
         Text(text = "Activity 1: CREATED")
-
-        val activityTwoText = getActivity2Text()
-        Text(text = "Activity 2: $activityTwoText")
-
+        Text(text = "Activity 2: ${getActivity2Text()}")
         Button(
-            onClick = { /*TODO*/ }
+            onClick = { onGoToActivity2Clicked() }
         ) {
             Text(text = "Go to Activity 2")
         }
         Button(
-            onClick = { /*TODO*/ }
+            onClick = {onResetClicked() }
         ) {
             Text(text = "RESET")
         }

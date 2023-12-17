@@ -16,10 +16,10 @@ class FirstActivity : AppCompatActivity() {
                 FirstActivityScreen(
                     getActivity2Text = { getActivity2Text() },
                     onResetClicked = {
-
+                        goToActivity2ClickedTimes = 0
                     },
                     onGoToActivity2Clicked = {
-
+                        goToActivity2ClickedTimes++
                     }
                 )
             }
