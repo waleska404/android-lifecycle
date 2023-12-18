@@ -16,7 +16,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SecondActivityScreen() {
+fun SecondActivityScreen(
+    onReturnToActivity1Clicked: () -> Unit,
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -32,7 +34,7 @@ fun SecondActivityScreen() {
         Text(text = "Activity 1: CREATED")
         Text(text = "Activity 2: CREATED")
         Button(
-            onClick = { }
+            onClick = { onReturnToActivity1Clicked() }
         ) {
             Text(text = "Return to Activity 1")
         }

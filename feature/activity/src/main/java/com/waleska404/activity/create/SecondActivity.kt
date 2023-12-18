@@ -11,6 +11,9 @@ class SecondActivity : AppCompatActivity() {
         setContent {
             AndroidLifecycleTheme {
                 SecondActivityScreen(
+                    onReturnToActivity1Clicked = {
+                        finish()
+                    }
                 )
             }
         }
