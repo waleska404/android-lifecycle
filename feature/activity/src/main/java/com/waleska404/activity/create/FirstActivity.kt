@@ -1,17 +1,20 @@
 package com.waleska404.activity.create
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 class FirstActivity : AppCompatActivity() {
 
     private var goToActivity2ClickedTimes = 0
+    private val TAG = "FirstActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate")
         setContent {
             AndroidLifecycleTheme {
                 FirstActivityScreen(
@@ -28,6 +31,11 @@ class FirstActivity : AppCompatActivity() {
                 )
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy")
     }
 
     private fun getActivity2Text(): String {
