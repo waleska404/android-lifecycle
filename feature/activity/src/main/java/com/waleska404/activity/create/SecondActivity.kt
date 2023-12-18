@@ -2,11 +2,17 @@ package com.waleska404.activity.create
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.waleska404.activity.R
+import androidx.activity.compose.setContent
+import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContent {
+            AndroidLifecycleTheme {
+                SecondActivityScreen(
+                )
+            }
+        }
     }
 }

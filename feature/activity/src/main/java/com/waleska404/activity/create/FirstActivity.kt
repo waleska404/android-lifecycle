@@ -1,5 +1,6 @@
 package com.waleska404.activity.create
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -20,6 +21,9 @@ class FirstActivity : AppCompatActivity() {
                     },
                     onGoToActivity2Clicked = {
                         goToActivity2ClickedTimes++
+                        startActivity(
+                            Intent(this, SecondActivity::class.java)
+                        )
                     }
                 )
             }
