@@ -17,9 +17,10 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun FirstActivityScreen(
-    getActivity2Text: () -> String,
-    onResetClicked: () -> Unit,
-    onGoToActivity2Clicked: () -> Unit
+    activity2Text: String,
+    changeTextToDestroyed: () -> Unit,
+    changeTextToNotCreated: () -> Unit,
+    navigateToActivity2: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -34,14 +35,19 @@ fun FirstActivityScreen(
         Spacer(modifier = Modifier.height(22.dp))
         Text(text = "State:")
         Text(text = "Activity 1: CREATED")
-        Text(text = "Activity 2: ${getActivity2Text()}")
+        Text(text = "Activity 2: $activity2Text")
         Button(
-            onClick = { onGoToActivity2Clicked() }
+            onClick = {
+                navigateToActivity2()
+                changeTextToDestroyed()
+            }
         ) {
             Text(text = "Go to Activity 2")
         }
         Button(
-            onClick = {onResetClicked() }
+            onClick = {
+                changeTextToNotCreated()
+            }
         ) {
             Text(text = "RESET")
         }

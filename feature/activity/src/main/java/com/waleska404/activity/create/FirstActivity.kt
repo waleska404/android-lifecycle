@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.mutableStateOf
 import com.waleska404.ui.theme.AndroidLifecycleTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class FirstActivity : AppCompatActivity() {
 
-    private var goToActivity2ClickedTimes = 0
     private val TAG = "FirstActivity"
+    private val text = mutableStateOf("NOT CREATED YET")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,12 +23,17 @@ class FirstActivity : AppCompatActivity() {
         setContent {
             AndroidLifecycleTheme {
                 FirstActivityScreen(
-                    getActivity2Text = { getActivity2Text() },
-                    onResetClicked = {
-                        goToActivity2ClickedTimes = 0
+                    activity2Text = text.value,
+                    changeTextToDestroyed = {
+                        CoroutineScope(Dispatchers.Main).launch{
+                            delay(1000)
+                            text.value =  "DESTROYED"
+                        }
                     },
-                    onGoToActivity2Clicked = {
-                        goToActivity2ClickedTimes++
+                    changeTextToNotCreated = {
+                        text.value = "NOT CREATED YET"
+                    },
+                    navigateToActivity2 = {
                         startActivity(
                             Intent(this, SecondActivity::class.java)
                         )
@@ -36,13 +46,5 @@ class FirstActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy")
-    }
-
-    private fun getActivity2Text(): String {
-        return if (goToActivity2ClickedTimes == 0) {
-            "NOT CREATED YET"
-        } else {
-            "DESTROYED"
-        }
     }
 }
