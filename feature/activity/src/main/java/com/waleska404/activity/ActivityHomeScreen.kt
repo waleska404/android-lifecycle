@@ -54,8 +54,8 @@ fun ActivityHomeScreen() {
                     Intent(context, FirstActivity::class.java)
                 )
             },
-            iconResource = R.drawable.life,
-            iconDescriptionResource = R.string.life_icon,
+            iconResource = R.drawable.callback,
+            iconDescriptionResource = R.string.callback_icon,
             modifier = Modifier.padding(8.dp),
         )
         CustomIconButtonEntryPoint(
@@ -63,8 +63,8 @@ fun ActivityHomeScreen() {
             onClick = {
 
             },
-            iconResource = R.drawable.life,
-            iconDescriptionResource = R.string.life_icon,
+            iconResource = R.drawable.callback,
+            iconDescriptionResource = R.string.callback_icon,
             modifier = Modifier.padding(8.dp),
         )
         CustomIconButtonEntryPoint(
@@ -72,8 +72,8 @@ fun ActivityHomeScreen() {
             onClick = {
 
             },
-            iconResource = R.drawable.life,
-            iconDescriptionResource = R.string.life_icon,
+            iconResource = R.drawable.callback,
+            iconDescriptionResource = R.string.callback_icon,
             modifier = Modifier.padding(8.dp),
         )
     }
