@@ -49,15 +49,15 @@ fun HomeScreen(
         CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.activity_lifecycle),
             onClick = navigateToActivityScreen,
-            iconResource = R.drawable.life,
-            iconDescriptionResource = R.string.life_icon,
+            iconResource = R.drawable.cycle,
+            iconDescriptionResource = R.string.cycle_icon,
             modifier = Modifier.padding(8.dp),
         )
         CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.fragment_lifecycle),
             onClick = { },
-            iconResource = R.drawable.life,
-            iconDescriptionResource = R.string.life_icon,
+            iconResource = R.drawable.cycle,
+            iconDescriptionResource = R.string.cycle_icon,
             modifier = Modifier.padding(8.dp),
         )
     }

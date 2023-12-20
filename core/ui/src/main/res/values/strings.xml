@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="life_icon">life icon</string>
+    <string name="cycle_icon">cycle icon</string>
     <string name="activity_lifecycle">Activity Lifecycle</string>
     <string name="fragment_lifecycle">Fragment Lifecycle</string>
     <string name="topics">Topics</string>
