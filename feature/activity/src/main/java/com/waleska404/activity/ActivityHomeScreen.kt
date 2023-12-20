@@ -1,63 +1,81 @@
 package com.waleska404.activity
 
 import android.content.Intent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.activity.create.FirstActivity
+import com.waleska404.ui.R
+import com.waleska404.ui.components.CustomIconButton
 
 @Composable
 fun ActivityHomeScreen() {
     val context = LocalContext.current
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
         Spacer(modifier = Modifier.height(12.dp))
+        // title
         Text(
-            fontSize = 30.sp,
-            text = "Activity Topics"
+            text = stringResource(id = R.string.activity_lifecycle),
+            fontWeight = FontWeight.Bold,
+            fontSize = 40.sp,
+            color = MaterialTheme.colorScheme.secondary,
+            modifier = Modifier.padding(8.dp),
+            lineHeight = 40.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 2,
         )
         Spacer(modifier = Modifier.height(22.dp))
-        Button(
-            modifier = Modifier.fillMaxWidth(),
+        CustomIconButton(
+            text = stringResource(id = R.string.create_destroy),
             onClick = {
                 context.startActivity(
                     Intent(context, FirstActivity::class.java)
                 )
-            }
-        ) {
-            Text(text = "Create and Destroy")
-        }
-        Button(
-            modifier = Modifier.fillMaxWidth(),
+            },
+            iconResource = R.drawable.life,
+            iconDescriptionResource = R.string.life_icon,
+            modifier = Modifier.padding(8.dp),
+        )
+        CustomIconButton(
+            text = stringResource(id = R.string.start_stop),
             onClick = {
 
-            }
-        ) {
-            Text(text = "Start and Stop")
-        }
-        Button(
-            modifier = Modifier.fillMaxWidth(),
+            },
+            iconResource = R.drawable.life,
+            iconDescriptionResource = R.string.life_icon,
+            modifier = Modifier.padding(8.dp),
+        )
+        CustomIconButton(
+            text = stringResource(id = R.string.resume_pause),
             onClick = {
 
-            }
-        ) {
-            Text(text = "Resume and Pause")
-        }
+            },
+            iconResource = R.drawable.life,
+            iconDescriptionResource = R.string.life_icon,
+            modifier = Modifier.padding(8.dp),
+        )
     }
 }
 

@@ -4,4 +4,7 @@
     <string name="activity_lifecycle">Activity Lifecycle</string>
     <string name="fragment_lifecycle">Fragment Lifecycle</string>
     <string name="topics">Topics</string>
+    <string name="create_destroy">onCreate and onDestroy</string>
+    <string name="start_stop">onStart and onStop</string>
+    <string name="resume_pause">onResume and onPause</string>
 </resources>
