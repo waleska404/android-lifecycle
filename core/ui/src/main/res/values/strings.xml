@@ -12,10 +12,11 @@
     <string name="goto_activity_2">Go to Activity 2</string>
     <string name="return_to_activity_1">Return to Activity 1</string>
     <string name="reset">Reset</string>
-    <string name="state">STATE</string>
+    <string name="state">Callback Executed</string>
     <string name="activity_1_state">Activity 1:</string>
     <string name="activity_2_state">Activity 2:</string>
-    <string name="activity_1_state_value">Created</string>
+    <string name="activity_1_state_value">onCreate()</string>
     <string name="activity_2_state_not_created">Not created yet</string>
     <string name="activity_2_state_destroyed">Destroyed</string>
+    <string name="executed_1_time">called 1 time.</string>
 </resources>

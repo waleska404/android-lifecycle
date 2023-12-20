@@ -99,6 +99,11 @@ fun SecondActivityScreen(
                         color = MaterialTheme.colorScheme.outline,
                         fontWeight = FontWeight.Bold
                     )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = stringResource(id = R.string.executed_1_time),
+                        color = MaterialTheme.colorScheme.background
+                    )
                 }
 
                 // Activity 2
@@ -115,6 +120,11 @@ fun SecondActivityScreen(
                         text = stringResource(id = R.string.activity_1_state_value),
                         color = MaterialTheme.colorScheme.outline,
                         fontWeight = FontWeight.Bold
+                    )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = stringResource(id = R.string.executed_1_time),
+                        color = MaterialTheme.colorScheme.background
                     )
                 }
             }
