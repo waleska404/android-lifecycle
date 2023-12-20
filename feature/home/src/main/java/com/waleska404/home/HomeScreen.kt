@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.ui.R
-import com.waleska404.ui.components.CustomIconButton
+import com.waleska404.ui.components.CustomIconButtonEntryPoint
 
 @Composable
 fun HomeScreen(
@@ -46,14 +46,14 @@ fun HomeScreen(
         )
         Spacer(modifier = Modifier.height(22.dp))
 
-        CustomIconButton(
+        CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.activity_lifecycle),
             onClick = navigateToActivityScreen,
             iconResource = R.drawable.life,
             iconDescriptionResource = R.string.life_icon,
             modifier = Modifier.padding(8.dp),
         )
-        CustomIconButton(
+        CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.fragment_lifecycle),
             onClick = { },
             iconResource = R.drawable.life,

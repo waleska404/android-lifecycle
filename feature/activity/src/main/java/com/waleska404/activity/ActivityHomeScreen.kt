@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.activity.create.FirstActivity
 import com.waleska404.ui.R
-import com.waleska404.ui.components.CustomIconButton
+import com.waleska404.ui.components.CustomIconButtonEntryPoint
 
 @Composable
 fun ActivityHomeScreen() {
@@ -47,7 +47,7 @@ fun ActivityHomeScreen() {
             maxLines = 2,
         )
         Spacer(modifier = Modifier.height(22.dp))
-        CustomIconButton(
+        CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.create_destroy),
             onClick = {
                 context.startActivity(
@@ -58,7 +58,7 @@ fun ActivityHomeScreen() {
             iconDescriptionResource = R.string.life_icon,
             modifier = Modifier.padding(8.dp),
         )
-        CustomIconButton(
+        CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.start_stop),
             onClick = {
 
@@ -67,7 +67,7 @@ fun ActivityHomeScreen() {
             iconDescriptionResource = R.string.life_icon,
             modifier = Modifier.padding(8.dp),
         )
-        CustomIconButton(
+        CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.resume_pause),
             onClick = {
 

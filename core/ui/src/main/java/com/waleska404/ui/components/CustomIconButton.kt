@@ -1,20 +1,15 @@
 package com.waleska404.ui.components
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -24,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -35,38 +29,38 @@ import com.waleska404.ui.theme.AndroidLifecycleTheme
 @Composable
 fun CustomIconButton(
     modifier: Modifier = Modifier,
-    containerColor: Color = MaterialTheme.colorScheme.onPrimary,
-    textColor: Color = MaterialTheme.colorScheme.secondary,
     text: String,
+    onClick: () -> Unit,
+    enabled: Boolean = true,
     iconResource: Int,
     iconDescriptionResource: Int,
-    iconTint: Color = MaterialTheme.colorScheme.secondary,
-    onClick: () -> Unit
+    iconTint: Color = MaterialTheme.colorScheme.primary,
+    containerColor: Color = MaterialTheme.colorScheme.secondary,
+    contentColor: Color = MaterialTheme.colorScheme.primary,
+    disabledContainerColor: Color = MaterialTheme.colorScheme.surface,
+    disabledContentColor: Color = MaterialTheme.colorScheme.primary
 ) {
-    Card(
+    Button(
         modifier = modifier
-            .fillMaxWidth()
-            .height(55.dp)
-            .clickable { onClick() },
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(
+            .height(40.dp),
+        onClick = { onClick() },
+        enabled = enabled,
+        colors = ButtonDefaults.buttonColors(
             containerColor = containerColor,
+            contentColor = contentColor,
+            disabledContainerColor = disabledContainerColor,
+            disabledContentColor = disabledContentColor,
         ),
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 18.dp,
+        contentPadding = PaddingValues(
+            0.dp
         )
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Start
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                modifier = Modifier
-                    .size(30.dp)
-                    .wrapContentSize(),
+                modifier = Modifier.size(20.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -75,27 +69,28 @@ fun CustomIconButton(
                     tint = iconTint,
                 )
             }
-            Spacer(modifier = Modifier.width(6.dp))
+            Spacer(Modifier.width(3.dp))
             Text(
                 text = text,
-                color = textColor,
-                fontSize = 20.sp,
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center
             )
         }
+
     }
 }
 
 @LightAndDarkPreviews
 @Composable
-fun CustomCardPreview() {
+fun CustomIconButtonPreview() {
     AndroidLifecycleTheme {
         CustomIconButton(
-            text = "Custom Card",
+            modifier = Modifier,
+            text = "Sort",
+            onClick = { },
             iconResource = R.drawable.life,
             iconDescriptionResource = R.string.life_icon,
-            onClick = {}
+            enabled = true,
         )
     }
 }

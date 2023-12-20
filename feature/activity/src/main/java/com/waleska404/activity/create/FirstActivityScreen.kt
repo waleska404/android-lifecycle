@@ -3,20 +3,29 @@ package com.waleska404.activity.create
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.waleska404.ui.R
+import com.waleska404.ui.components.CustomIconButton
 
 @Composable
 fun FirstActivityScreen(
@@ -28,52 +37,87 @@ fun FirstActivityScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(MaterialTheme.colorScheme.background)
             .padding(26.dp),
     ) {
         Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.White),
+                .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
             Spacer(modifier = Modifier.height(12.dp))
             Text(
+                text = stringResource(id = R.string.activity_1),
+                fontWeight = FontWeight.Bold,
                 fontSize = 30.sp,
-                text = "Activity 1"
+                color = MaterialTheme.colorScheme.secondary,
+                modifier = Modifier.padding(8.dp),
+                lineHeight = 30.sp,
+                textAlign = TextAlign.Center,
+                maxLines = 2,
             )
-            Divider(thickness = 1.dp)
+            Divider(
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.secondary
+            )
         }
         Spacer(modifier = Modifier.height(22.dp))
-        Column(
+        Card(
             modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.White),
-            horizontalAlignment = Alignment.Start,
-            verticalArrangement = Arrangement.Top
+                .wrapContentSize(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.secondary
+            )
         ) {
-            Text(text = "State:")
-            Text(text = "Activity 1: CREATED")
-            Text(text = "Activity 2: $activity2Text")
-            Spacer(modifier = Modifier.height(22.dp))
-            Button(
-                modifier = Modifier.fillMaxWidth(),
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color.Transparent)
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.Start,
+                verticalArrangement = Arrangement.Top
+            ) {
+                Text(
+                    text = "State:",
+                    color = MaterialTheme.colorScheme.background
+                )
+                Text(
+                    text = "Activity 1: CREATED",
+                    color = MaterialTheme.colorScheme.background
+                )
+                Text(
+                    text = "Activity 2: $activity2Text",
+                    color = MaterialTheme.colorScheme.background
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(22.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            CustomIconButton(
+                modifier = Modifier.weight(0.6f),
+                text = stringResource(id = R.string.reset),
+                onClick = {
+                    changeTextToNotCreated()
+                },
+                iconResource = R.drawable.life,
+                iconDescriptionResource = R.string.life_icon
+            )
+            Spacer(modifier = Modifier.weight(0.1f))
+            CustomIconButton(
+                modifier = Modifier.weight(1f),
+                text = stringResource(id = R.string.goto_activity_2),
                 onClick = {
                     navigateToActivity2()
                     changeTextToDestroyed()
-                }
-            ) {
-                Text(text = "Go to Activity 2")
-            }
-            Button(
-                modifier = Modifier.fillMaxWidth(),
-                onClick = {
-                    changeTextToNotCreated()
-                }
-            ) {
-                Text(text = "RESET")
-            }
+                },
+                iconResource = R.drawable.life,
+                iconDescriptionResource = R.string.life_icon
+            )
         }
     }
 }
