@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.waleska404.ui"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
