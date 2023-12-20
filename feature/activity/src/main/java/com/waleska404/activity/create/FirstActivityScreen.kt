@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -48,7 +49,7 @@ fun FirstActivityScreen(
         ) {
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = stringResource(id = R.string.activity_1),
+                text = stringResource(id = R.string.activity_1_title),
                 fontWeight = FontWeight.Bold,
                 fontSize = 30.sp,
                 color = MaterialTheme.colorScheme.secondary,
@@ -79,17 +80,46 @@ fun FirstActivityScreen(
                 verticalArrangement = Arrangement.Top
             ) {
                 Text(
-                    text = "State:",
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxWidth(),
+                    text = stringResource(id = R.string.state),
+                    color = MaterialTheme.colorScheme.background,
+                    textAlign = TextAlign.Center,
+                    fontWeight = FontWeight.Bold
                 )
-                Text(
-                    text = "Activity 1: CREATED",
-                    color = MaterialTheme.colorScheme.background
-                )
-                Text(
-                    text = "Activity 2: $activity2Text",
-                    color = MaterialTheme.colorScheme.background
-                )
+                Spacer(modifier = Modifier.height(10.dp))
+                // Activity 1
+                Row(
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.activity_1_state),
+                        color = MaterialTheme.colorScheme.background
+                    )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = stringResource(id = R.string.activity_1_state_value),
+                        color = MaterialTheme.colorScheme.outline,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+
+                // Activity 2
+                Row(
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.activity_2_state),
+                        color = MaterialTheme.colorScheme.background
+                    )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = activity2Text,
+                        color = MaterialTheme.colorScheme.surface,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
             }
         }
         Spacer(modifier = Modifier.height(22.dp))

@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 class FirstActivity : AppCompatActivity() {
 
     private val TAG = "FirstActivity"
-    private val text = mutableStateOf("NOT CREATED YET")
+    private val text = mutableStateOf("Not created yet")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
