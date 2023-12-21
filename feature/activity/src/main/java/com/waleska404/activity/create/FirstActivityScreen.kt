@@ -87,6 +87,7 @@ fun FirstActivityScreen(
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(10.dp))
+
                 // Activity 1
                 Row(
                     verticalAlignment = Alignment.Bottom,
@@ -139,7 +140,7 @@ fun FirstActivityScreen(
                 onClick = {
                     changeTextToNotCreated()
                 },
-                iconResource = R.drawable.life,
+                iconResource = R.drawable.reset,
                 iconDescriptionResource = R.string.life_icon
             )
             Spacer(modifier = Modifier.weight(0.1f))
@@ -150,7 +151,7 @@ fun FirstActivityScreen(
                     navigateToActivity2()
                     changeTextToDestroyed()
                 },
-                iconResource = R.drawable.life,
+                iconResource = R.drawable.next,
                 iconDescriptionResource = R.string.life_icon
             )
         }

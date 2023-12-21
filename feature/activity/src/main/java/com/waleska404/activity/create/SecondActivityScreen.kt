@@ -141,7 +141,7 @@ fun SecondActivityScreen(
                 onClick = {
                     onReturnToActivity1Clicked()
                 },
-                iconResource = R.drawable.life,
+                iconResource = R.drawable.ret,
                 iconDescriptionResource = R.string.life_icon
             )
         }
