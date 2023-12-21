@@ -122,8 +122,13 @@ fun FirstActivityScreen(
                     Spacer(modifier = Modifier.width(5.dp))
                     Text(
                         text = activity2Text,
-                        color = MaterialTheme.colorScheme.surface,
+                        color = if(activity2Text == "onDestroy()") MaterialTheme.colorScheme.outlineVariant else MaterialTheme.colorScheme.surface,
                         fontWeight = FontWeight.Bold
+                    )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = if(activity2Text == "onDestroy()") stringResource(id = R.string.already_called) else "",
+                        color = MaterialTheme.colorScheme.background
                     )
                 }
             }

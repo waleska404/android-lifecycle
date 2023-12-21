@@ -27,11 +27,11 @@ class FirstActivity : AppCompatActivity() {
                     changeTextToDestroyed = {
                         CoroutineScope(Dispatchers.Main).launch{
                             delay(1000)
-                            text.value =  "DESTROYED"
+                            text.value =  "onDestroy()"
                         }
                     },
                     changeTextToNotCreated = {
-                        text.value = "NOT CREATED YET"
+                        text.value = "Not created yet"
                     },
                     navigateToActivity2 = {
                         startActivity(
