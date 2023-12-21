@@ -36,7 +36,7 @@ fun SecondActivityScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
-            .padding(26.dp),
+            .padding(16.dp),
     ) {
         Column(
             modifier = Modifier
@@ -101,7 +101,7 @@ fun SecondActivityScreen(
                     )
                     Spacer(modifier = Modifier.width(5.dp))
                     Text(
-                        text = stringResource(id = R.string.executed_1_time),
+                        text = stringResource(id = R.string.already_called),
                         color = MaterialTheme.colorScheme.background
                     )
                 }
@@ -123,7 +123,7 @@ fun SecondActivityScreen(
                     )
                     Spacer(modifier = Modifier.width(5.dp))
                     Text(
-                        text = stringResource(id = R.string.executed_1_time),
+                        text = stringResource(id = R.string.already_called),
                         color = MaterialTheme.colorScheme.background
                     )
                 }

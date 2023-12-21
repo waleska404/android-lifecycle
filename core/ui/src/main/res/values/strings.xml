@@ -22,5 +22,5 @@
     <string name="activity_1_state_value">onCreate()</string>
     <string name="activity_2_state_not_created">Not created yet</string>
     <string name="activity_2_state_destroyed">Destroyed</string>
-    <string name="executed_1_time">called 1 time.</string>
+    <string name="already_called">already called.</string>
 </resources>
