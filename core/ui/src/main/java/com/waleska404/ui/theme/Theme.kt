@@ -21,7 +21,8 @@ private val DarkColorScheme = darkColorScheme(
     surface = DisabledColorDark,
     outline = AccentGreen,
     outlineVariant = AccentRed,
-    inverseSurface = AccentYellow
+    inverseSurface = AccentYellow,
+    inverseOnSurface = AccentOrange
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -34,7 +35,8 @@ private val LightColorScheme = lightColorScheme(
     surface = DisabledColorLight,
     outline = AccentGreen,
     outlineVariant = AccentRed,
-    inverseSurface = AccentYellow
+    inverseSurface = AccentYellow,
+    inverseOnSurface = AccentOrange
 )
 
 @Composable
