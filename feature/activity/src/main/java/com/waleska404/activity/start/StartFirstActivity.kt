@@ -1,5 +1,6 @@
 package com.waleska404.activity.start
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +20,11 @@ class StartFirstActivity : AppCompatActivity() {
             AndroidLifecycleTheme {
                 StartFirstActivityScreen(
                     initialState = initState.value,
+                    navigateToActivity2 = {
+                        startActivity(
+                            Intent(this, StartSecondActivity::class.java)
+                        )
+                    }
                 )
             }
         }

@@ -3,9 +3,13 @@
 
     <application>
         <activity
+            android:name=".start.StartSecondActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".start.StartFirstActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".create.SecondActivity"
             android:exported="false"
