@@ -17,6 +17,7 @@
     <string name="return_to_activity_1">Return to Activity 1</string>
     <string name="reset">Reset</string>
     <string name="state">Callback Executed</string>
+    <string name="callbacks_executed">Callbacks Executed</string>
     <string name="activity_1_state">Activity 1:</string>
     <string name="activity_2_state">Activity 2:</string>
     <string name="activity_1_state_value">onCreate()</string>
