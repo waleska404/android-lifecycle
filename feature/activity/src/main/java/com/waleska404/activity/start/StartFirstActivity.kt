@@ -1,4 +1,4 @@
-package com.waleska404.activity.create
+package com.waleska404.activity.start
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,22 +6,30 @@ import android.util.Log
 import androidx.activity.compose.setContent
 import com.waleska404.ui.theme.AndroidLifecycleTheme
 
-class SecondActivity : AppCompatActivity() {
+class StartFirstActivity : AppCompatActivity() {
 
-    private val TAG = "MyActivity2"
+    private val TAG = "MyActivity1"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
         setContent {
             AndroidLifecycleTheme {
-                SecondActivityScreen(
-                    onReturnToActivity1Clicked = {
-                        finish()
-                    }
+                StartFirstActivityScreen(
+
                 )
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop")
     }
 
     override fun onDestroy() {

@@ -3,6 +3,9 @@
 
     <application>
         <activity
+            android:name=".start.StartFirstActivity"
+            android:exported="false" />
+        <activity
             android:name=".create.SecondActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
