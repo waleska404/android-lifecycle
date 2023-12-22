@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.mutableStateOf
 import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 class StartFirstActivity : AppCompatActivity() {
 
     private val TAG = "MyActivity1"
+    private val initState = mutableStateOf(true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +18,7 @@ class StartFirstActivity : AppCompatActivity() {
         setContent {
             AndroidLifecycleTheme {
                 StartFirstActivityScreen(
-
+                    initialState = initState.value,
                 )
             }
         }
