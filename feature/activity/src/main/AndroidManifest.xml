@@ -4,7 +4,8 @@
     <application>
         <activity
             android:name=".start.StartThirdActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".start.StartSecondActivity"
             android:exported="false"

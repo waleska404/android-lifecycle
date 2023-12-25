@@ -1,5 +1,6 @@
 package com.waleska404.activity.start
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +28,9 @@ class StartSecondActivity : AppCompatActivity() {
                 StartSecondActivityScreen(
                     initialState = initState.value,
                     navigateToActivity3 = {
-
+                        startActivity(
+                            Intent(this, StartThirdActivity::class.java)
+                        )
                     }
                 )
             }
