@@ -190,7 +190,7 @@ fun HeaderThirdScreen() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = stringResource(id = R.string.activity_2_title),
+            text = stringResource(id = R.string.activity_3_title),
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
             color = MaterialTheme.colorScheme.secondary,
