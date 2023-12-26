@@ -55,6 +55,16 @@ class ResumeSecondActivity : AppCompatActivity() {
         Log.d(TAG, "onStart")
     }
 
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume")
+    }
+
     override fun onStop() {
         super.onStop()
         Log.d(TAG, "onStop")

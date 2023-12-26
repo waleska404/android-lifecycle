@@ -142,6 +142,36 @@ fun CallbacksResumeSecondScreen(
                     fontWeight = FontWeight.Bold
                 )
             }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_resume),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_pause),
+                    color = MaterialTheme.colorScheme.inverseSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            }
             // Activity 2
             Row(
                 verticalAlignment = Alignment.Bottom,
@@ -169,6 +199,21 @@ fun CallbacksResumeSecondScreen(
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(
                     text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_resume),
                     color = MaterialTheme.colorScheme.outline,
                     fontWeight = FontWeight.Bold
                 )
@@ -215,6 +260,22 @@ fun CallbacksResumeSecondScreen(
 
 @Composable
 fun CallbacksAddedResume() {
+    // Activity 2
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_2_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_pause),
+            color = MaterialTheme.colorScheme.inverseSurface,
+            fontWeight = FontWeight.Bold
+        )
+    }
     // Activity 3
     Row(
         verticalAlignment = Alignment.Bottom,
@@ -243,6 +304,54 @@ fun CallbacksAddedResume() {
         Spacer(modifier = Modifier.width(5.dp))
         Text(
             text = stringResource(id = R.string.on_start),
+            color = MaterialTheme.colorScheme.outline,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_resume),
+            color = MaterialTheme.colorScheme.outline,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_pause),
+            color = MaterialTheme.colorScheme.inverseSurface,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 2
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_2_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_resume),
             color = MaterialTheme.colorScheme.outline,
             fontWeight = FontWeight.Bold
         )
