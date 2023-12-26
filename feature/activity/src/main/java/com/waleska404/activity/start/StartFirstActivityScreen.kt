@@ -50,7 +50,7 @@ fun StartFirstActivityScreen(
         if (initialState) {
             InitialStateScreen()
         } else {
-            //TODO
+            CallbacksFirstScreen()
         }
         Footer(
             navigateToActivity2 = navigateToActivity2,
@@ -85,6 +85,258 @@ fun Header() {
         color = MaterialTheme.colorScheme.secondary
     )
     Spacer(modifier = Modifier.height(22.dp))
+}
+
+@Composable
+fun CallbacksFirstScreen(
+) {
+    Card(
+        modifier = Modifier
+            .wrapContentSize(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.secondary
+        )
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color.Transparent)
+                .padding(16.dp),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Top
+        ) {
+            Text(
+                modifier = Modifier.fillMaxWidth(),
+                text = stringResource(id = R.string.callbacks_executed),
+                color = MaterialTheme.colorScheme.background,
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            // Activity 1
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.activity_1_state_value),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 2
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.activity_1_state_value),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 1
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_stop),
+                    color = MaterialTheme.colorScheme.inverseOnSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 3
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_3_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.activity_1_state_value),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 3
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_3_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 2
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_stop),
+                    color = MaterialTheme.colorScheme.inverseOnSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 2
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 3
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_3_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_stop),
+                    color = MaterialTheme.colorScheme.inverseOnSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 3
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_3_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_destroy),
+                    color = MaterialTheme.colorScheme.outlineVariant,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 1
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_1_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_start),
+                    color = MaterialTheme.colorScheme.outline,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 2
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_stop),
+                    color = MaterialTheme.colorScheme.inverseOnSurface,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+            // Activity 2
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Text(
+                    text = stringResource(id = R.string.activity_2_state),
+                    color = MaterialTheme.colorScheme.background
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = stringResource(id = R.string.on_destroy),
+                    color = MaterialTheme.colorScheme.outlineVariant,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+    }
 }
 
 @Composable
