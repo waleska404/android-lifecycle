@@ -33,7 +33,7 @@ class StartFirstActivity : AppCompatActivity() {
                         initState.value = true
                     },
                     setInitStateToFalse = {
-                        CoroutineScope(Dispatchers.Main).launch{
+                        CoroutineScope(Dispatchers.Main).launch {
                             delay(1000)
                             initState.value = false
                         }

@@ -8,6 +8,10 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.mutableStateOf
 import com.waleska404.ui.theme.AndroidLifecycleTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class StartSecondActivity : AppCompatActivity() {
 
@@ -34,6 +38,12 @@ class StartSecondActivity : AppCompatActivity() {
                     },
                     returnToActivity1 = {
                         finish()
+                    },
+                    setInitStateToFalse = {
+                        CoroutineScope(Dispatchers.Main).launch {
+                            delay(1000)
+                            initState.value = false
+                        }
                     }
                 )
             }

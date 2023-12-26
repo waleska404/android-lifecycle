@@ -34,6 +34,7 @@ import com.waleska404.ui.components.CustomIconButton
 fun StartSecondActivityScreen(
     navigateToActivity3: () -> Unit,
     returnToActivity1: () -> Unit,
+    setInitStateToFalse: () -> Unit,
     initialState: Boolean,
 ) {
     Column(
@@ -53,7 +54,9 @@ fun StartSecondActivityScreen(
         }
         FooterSecondScreen(
             navigateToActivity3 = navigateToActivity3,
-            returnToActivity1 = returnToActivity1
+            returnToActivity1 = returnToActivity1,
+            initialState = initialState,
+            setInitStateToFalse = setInitStateToFalse,
         )
     }
 }
@@ -213,7 +216,9 @@ fun InitialStateSecondScreen() {
 @Composable
 fun FooterSecondScreen(
     navigateToActivity3: () -> Unit,
-    returnToActivity1: () -> Unit
+    returnToActivity1: () -> Unit,
+    initialState: Boolean,
+    setInitStateToFalse: () -> Unit
 ) {
     Spacer(modifier = Modifier.height(22.dp))
     Row(
@@ -221,24 +226,27 @@ fun FooterSecondScreen(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
-        CustomIconButton(
-            modifier = Modifier.weight(0.6f),
-            text = stringResource(id = R.string.return_to_activity_1),
-            onClick = {
-                returnToActivity1()
-            },
-            iconResource = R.drawable.ret,
-            iconDescriptionResource = R.string.return_icon
-        )
-        Spacer(modifier = Modifier.weight(0.1f))
-        CustomIconButton(
-            modifier = Modifier.weight(1f),
-            text = stringResource(id = R.string.goto_activity_3),
-            onClick = {
-                navigateToActivity3()
-            },
-            iconResource = R.drawable.next,
-            iconDescriptionResource = R.string.life_icon
-        )
+        if(!initialState) {
+            CustomIconButton(
+                modifier = Modifier.weight(0.6f),
+                text = stringResource(id = R.string.return_to_activity_1),
+                onClick = {
+                    returnToActivity1()
+                },
+                iconResource = R.drawable.ret,
+                iconDescriptionResource = R.string.return_icon
+            )
+        } else {
+            CustomIconButton(
+                modifier = Modifier.weight(1f),
+                text = stringResource(id = R.string.goto_activity_3),
+                onClick = {
+                    navigateToActivity3()
+                    setInitStateToFalse()
+                },
+                iconResource = R.drawable.next,
+                iconDescriptionResource = R.string.life_icon
+            )
+        }
     }
 }
