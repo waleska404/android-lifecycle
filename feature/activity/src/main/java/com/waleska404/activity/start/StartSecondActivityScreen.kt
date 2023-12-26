@@ -219,6 +219,15 @@ fun FooterSecondScreen(
         horizontalArrangement = Arrangement.Center
     ) {
         CustomIconButton(
+            modifier = Modifier.weight(0.6f),
+            text = stringResource(id = R.string.return_to_activity_1),
+            onClick = {
+            },
+            iconResource = R.drawable.ret,
+            iconDescriptionResource = R.string.return_icon
+        )
+        Spacer(modifier = Modifier.weight(0.1f))
+        CustomIconButton(
             modifier = Modifier.weight(1f),
             text = stringResource(id = R.string.goto_activity_3),
             onClick = {

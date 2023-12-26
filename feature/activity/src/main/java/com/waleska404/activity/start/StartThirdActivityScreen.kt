@@ -251,12 +251,12 @@ fun FooterThirdScreen(
     ) {
         CustomIconButton(
             modifier = Modifier.weight(1f),
-            text = stringResource(id = R.string.goto_activity_3),
+            text = stringResource(id = R.string.return_to_activity_2),
             onClick = {
                 returnToActivity2()
             },
-            iconResource = R.drawable.next,
-            iconDescriptionResource = R.string.life_icon
+            iconResource = R.drawable.ret,
+            iconDescriptionResource = R.string.return_icon
         )
     }
 }

@@ -12,7 +12,7 @@ class StartThirdActivity : AppCompatActivity() {
             AndroidLifecycleTheme {
                 StartThirdActivityScreen(
                     returnToActivity2 = {
-
+                        finish()
                     },
                     initialState = true
                 )
