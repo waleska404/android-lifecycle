@@ -33,6 +33,8 @@ import com.waleska404.ui.components.CustomIconButton
 @Composable
 fun StartFirstActivityScreen(
     navigateToActivity2: () -> Unit,
+    setInitStateToFalse: () -> Unit,
+    setInitStateToTrue: () -> Unit,
     initialState: Boolean,
 ) {
     Column(
@@ -51,7 +53,10 @@ fun StartFirstActivityScreen(
             //TODO
         }
         Footer(
-            navigateToActivity2 = navigateToActivity2
+            navigateToActivity2 = navigateToActivity2,
+            setInitStateToFalse = setInitStateToFalse,
+            setInitStateToTrue = setInitStateToTrue,
+            initialState = initialState
         )
     }
 }
@@ -179,6 +184,9 @@ fun InitialStateScreen() {
 @Composable
 fun Footer(
     navigateToActivity2: () -> Unit,
+    setInitStateToFalse: () -> Unit,
+    setInitStateToTrue: () -> Unit,
+    initialState: Boolean
 ) {
     Spacer(modifier = Modifier.height(22.dp))
     Row(
@@ -186,23 +194,27 @@ fun Footer(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
-        CustomIconButton(
-            modifier = Modifier.weight(0.6f),
-            text = stringResource(id = R.string.reset),
-            onClick = {
-            },
-            iconResource = R.drawable.reset,
-            iconDescriptionResource = R.string.life_icon
-        )
-        Spacer(modifier = Modifier.weight(0.1f))
-        CustomIconButton(
-            modifier = Modifier.weight(1f),
-            text = stringResource(id = R.string.goto_activity_2),
-            onClick = {
-                navigateToActivity2()
-            },
-            iconResource = R.drawable.next,
-            iconDescriptionResource = R.string.life_icon
-        )
+        if(!initialState) {
+            CustomIconButton(
+                modifier = Modifier.weight(0.6f),
+                text = stringResource(id = R.string.reset),
+                onClick = {
+                    setInitStateToTrue()
+                },
+                iconResource = R.drawable.reset,
+                iconDescriptionResource = R.string.life_icon
+            )
+        } else {
+            CustomIconButton(
+                modifier = Modifier.weight(1f),
+                text = stringResource(id = R.string.goto_activity_2),
+                onClick = {
+                    navigateToActivity2()
+                    setInitStateToFalse()
+                },
+                iconResource = R.drawable.next,
+                iconDescriptionResource = R.string.life_icon
+            )
+        }
     }
 }

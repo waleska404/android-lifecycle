@@ -7,6 +7,10 @@ import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.mutableStateOf
 import com.waleska404.ui.theme.AndroidLifecycleTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class StartFirstActivity : AppCompatActivity() {
 
@@ -24,6 +28,15 @@ class StartFirstActivity : AppCompatActivity() {
                         startActivity(
                             Intent(this, StartSecondActivity::class.java)
                         )
+                    },
+                    setInitStateToTrue = {
+                        initState.value = true
+                    },
+                    setInitStateToFalse = {
+                        CoroutineScope(Dispatchers.Main).launch{
+                            delay(1000)
+                            initState.value = false
+                        }
                     }
                 )
             }

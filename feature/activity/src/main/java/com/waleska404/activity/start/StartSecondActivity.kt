@@ -31,6 +31,9 @@ class StartSecondActivity : AppCompatActivity() {
                         startActivity(
                             Intent(this, StartThirdActivity::class.java)
                         )
+                    },
+                    returnToActivity1 = {
+                        finish()
                     }
                 )
             }

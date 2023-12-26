@@ -33,6 +33,7 @@ import com.waleska404.ui.components.CustomIconButton
 @Composable
 fun StartSecondActivityScreen(
     navigateToActivity3: () -> Unit,
+    returnToActivity1: () -> Unit,
     initialState: Boolean,
 ) {
     Column(
@@ -51,7 +52,8 @@ fun StartSecondActivityScreen(
             //TODO
         }
         FooterSecondScreen(
-            navigateToActivity3 = navigateToActivity3
+            navigateToActivity3 = navigateToActivity3,
+            returnToActivity1 = returnToActivity1
         )
     }
 }
@@ -211,6 +213,7 @@ fun InitialStateSecondScreen() {
 @Composable
 fun FooterSecondScreen(
     navigateToActivity3: () -> Unit,
+    returnToActivity1: () -> Unit
 ) {
     Spacer(modifier = Modifier.height(22.dp))
     Row(
@@ -222,6 +225,7 @@ fun FooterSecondScreen(
             modifier = Modifier.weight(0.6f),
             text = stringResource(id = R.string.return_to_activity_1),
             onClick = {
+                returnToActivity1()
             },
             iconResource = R.drawable.ret,
             iconDescriptionResource = R.string.return_icon
