@@ -29,27 +29,25 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.ui.R
 import com.waleska404.ui.components.CustomIconButton
+import com.waleska404.ui.theme.TransparentBlue
 
 @Composable
 fun StartThirdActivityScreen(
     returnToActivity2: () -> Unit,
-    initialState: Boolean,
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(TransparentBlue)
             .padding(16.dp)
             .verticalScroll(
                 state = rememberScrollState()
-            )
+            ),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         HeaderThirdScreen()
-        if (initialState) {
-            InitialStateThirdScreen()
-        } else {
-            //TODO
-        }
+        InitialStateThirdScreen()
         FooterThirdScreen(
             returnToActivity2 = returnToActivity2
         )
@@ -194,7 +192,7 @@ fun InitialStateThirdScreen() {
             }
             // Activity 2
             Row(
-                verticalAlignment = Alignment.Bottom,
+                verticalAlignment = Alignment.Top,
                 horizontalArrangement = Arrangement.Start
             ) {
                 Text(
@@ -203,8 +201,8 @@ fun InitialStateThirdScreen() {
                 )
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(
-                    text = stringResource(id = R.string.on_stop),
-                    color = MaterialTheme.colorScheme.inverseOnSurface,
+                    text = stringResource(id = R.string.on_stop_not_executed),
+                    color = MaterialTheme.colorScheme.background,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -225,6 +223,22 @@ fun HeaderThirdScreen() {
             text = stringResource(id = R.string.activity_3_title),
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
+            color = MaterialTheme.colorScheme.secondary,
+            modifier = Modifier.padding(8.dp),
+            lineHeight = 30.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 2,
+        )
+    }
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_subtitle),
+            fontWeight = FontWeight.Bold,
+            fontSize = 15.sp,
             color = MaterialTheme.colorScheme.secondary,
             modifier = Modifier.padding(8.dp),
             lineHeight = 30.sp,

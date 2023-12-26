@@ -5,7 +5,7 @@
         <activity
             android:name=".start.StartThirdActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Translucent" />
         <activity
             android:name=".start.StartSecondActivity"
             android:exported="false"

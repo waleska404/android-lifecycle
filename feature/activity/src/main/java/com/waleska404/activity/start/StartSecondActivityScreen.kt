@@ -248,38 +248,6 @@ fun CallbacksAdded() {
             fontWeight = FontWeight.Bold
         )
     }
-    // Activity 2
-    Row(
-        verticalAlignment = Alignment.Bottom,
-        horizontalArrangement = Arrangement.Start
-    ) {
-        Text(
-            text = stringResource(id = R.string.activity_2_state),
-            color = MaterialTheme.colorScheme.background
-        )
-        Spacer(modifier = Modifier.width(5.dp))
-        Text(
-            text = stringResource(id = R.string.on_stop),
-            color = MaterialTheme.colorScheme.inverseOnSurface,
-            fontWeight = FontWeight.Bold
-        )
-    }
-    // Activity 2
-    Row(
-        verticalAlignment = Alignment.Bottom,
-        horizontalArrangement = Arrangement.Start
-    ) {
-        Text(
-            text = stringResource(id = R.string.activity_2_state),
-            color = MaterialTheme.colorScheme.background
-        )
-        Spacer(modifier = Modifier.width(5.dp))
-        Text(
-            text = stringResource(id = R.string.on_start),
-            color = MaterialTheme.colorScheme.outline,
-            fontWeight = FontWeight.Bold
-        )
-    }
     // Activity 3
     Row(
         verticalAlignment = Alignment.Bottom,

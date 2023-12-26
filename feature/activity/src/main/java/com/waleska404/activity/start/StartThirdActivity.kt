@@ -19,7 +19,6 @@ class StartThirdActivity : AppCompatActivity() {
                     returnToActivity2 = {
                         finish()
                     },
-                    initialState = true
                 )
             }
         }
