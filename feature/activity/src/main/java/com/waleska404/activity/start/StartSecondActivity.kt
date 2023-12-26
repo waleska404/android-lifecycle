@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 
 class StartSecondActivity : AppCompatActivity() {
 
-    private val TAG = "MyActivity2"
+    private val TAG = "MYTAG - Activity2"
     private val initState = mutableStateOf(true)
 
     override fun onCreate(savedInstanceState: Bundle?) {

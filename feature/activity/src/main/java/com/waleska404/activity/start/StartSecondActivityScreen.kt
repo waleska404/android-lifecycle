@@ -47,11 +47,7 @@ fun StartSecondActivityScreen(
             )
     ) {
         HeaderSecondScreen()
-        if (initialState) {
-            InitialStateSecondScreen()
-        } else {
-            //TODO
-        }
+        CallbacksSecondScreen(initialState = initialState)
         FooterSecondScreen(
             navigateToActivity3 = navigateToActivity3,
             returnToActivity1 = returnToActivity1,
@@ -89,7 +85,9 @@ fun HeaderSecondScreen() {
 }
 
 @Composable
-fun InitialStateSecondScreen() {
+fun CallbacksSecondScreen(
+    initialState: Boolean
+) {
     Card(
         modifier = Modifier
             .wrapContentSize(),
@@ -192,24 +190,127 @@ fun InitialStateSecondScreen() {
                     fontWeight = FontWeight.Bold
                 )
             }
-            // Activity 3
-            Row(
-                verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.Start
-            ) {
-                Text(
-                    text = stringResource(id = R.string.activity_3_state),
-                    color = MaterialTheme.colorScheme.background
-                )
-                Spacer(modifier = Modifier.width(5.dp))
-                Text(
-                    text = stringResource(id = R.string.activity_2_state_not_created),
-                    color = MaterialTheme.colorScheme.surface,
-                    fontWeight = FontWeight.Bold
-                )
+            if(initialState) {
+                // Activity 3
+                Row(
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.activity_3_state),
+                        color = MaterialTheme.colorScheme.background
+                    )
+                    Spacer(modifier = Modifier.width(5.dp))
+                    Text(
+                        text = stringResource(id = R.string.activity_2_state_not_created),
+                        color = MaterialTheme.colorScheme.surface,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            } else {
+                CallbacksAdded()
             }
-
         }
+    }
+}
+
+@Composable
+fun CallbacksAdded() {
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.activity_1_state_value),
+            color = MaterialTheme.colorScheme.outline,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_start),
+            color = MaterialTheme.colorScheme.outline,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 2
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_2_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_stop),
+            color = MaterialTheme.colorScheme.inverseOnSurface,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 2
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_2_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_start),
+            color = MaterialTheme.colorScheme.outline,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_stop),
+            color = MaterialTheme.colorScheme.inverseOnSurface,
+            fontWeight = FontWeight.Bold
+        )
+    }
+    // Activity 3
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        Text(
+            text = stringResource(id = R.string.activity_3_state),
+            color = MaterialTheme.colorScheme.background
+        )
+        Spacer(modifier = Modifier.width(5.dp))
+        Text(
+            text = stringResource(id = R.string.on_destroy),
+            color = MaterialTheme.colorScheme.outlineVariant,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
 

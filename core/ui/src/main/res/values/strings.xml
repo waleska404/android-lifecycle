@@ -28,6 +28,7 @@
     <string name="activity_1_state_value">onCreate()</string>
     <string name="on_start">onStart()</string>
     <string name="on_stop">onStop()</string>
+    <string name="on_destroy">onDestroy()</string>
     <string name="activity_2_state_not_created">Not created yet</string>
     <string name="activity_2_state_destroyed">Destroyed</string>
     <string name="already_called">already called.</string>

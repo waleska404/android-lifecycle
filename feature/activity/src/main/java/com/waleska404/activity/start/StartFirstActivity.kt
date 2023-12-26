@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 
 class StartFirstActivity : AppCompatActivity() {
 
-    private val TAG = "MyActivity1"
+    private val TAG = "MYTAG - Activity1"
     private val initState = mutableStateOf(true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
