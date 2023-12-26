@@ -3,6 +3,14 @@
 
     <application>
         <activity
+            android:name=".resume.ResumeThirdActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name=".resume.ResumeSecondActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".resume.ResumeFirstActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

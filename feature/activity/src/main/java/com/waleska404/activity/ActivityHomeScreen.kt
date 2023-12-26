@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.activity.create.FirstActivity
+import com.waleska404.activity.resume.ResumeFirstActivity
 import com.waleska404.activity.start.StartFirstActivity
 import com.waleska404.ui.R
 import com.waleska404.ui.components.CustomIconButtonEntryPoint
@@ -73,7 +74,9 @@ fun ActivityHomeScreen() {
         CustomIconButtonEntryPoint(
             text = stringResource(id = R.string.resume_pause),
             onClick = {
-
+                context.startActivity(
+                    Intent(context, ResumeFirstActivity::class.java)
+                )
             },
             iconResource = R.drawable.callback,
             iconDescriptionResource = R.string.callback_icon,

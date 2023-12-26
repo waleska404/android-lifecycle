@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.mutableStateOf
 import com.waleska404.ui.theme.AndroidLifecycleTheme
@@ -12,25 +13,31 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class ResumeFirstActivity : AppCompatActivity() {
+class ResumeSecondActivity : AppCompatActivity() {
 
-    private val TAG = "MYTAG - Activity1"
+    private val TAG = "MYTAG - Activity2"
     private val initState = mutableStateOf(true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                Log.d("MYTAG","Back button pressed")
+                // Code that you need to execute on back press, e.g. finish()
+            }
+        })
         Log.d(TAG, "onCreate")
         setContent {
             AndroidLifecycleTheme {
-                ResumeFirstActivityScreen(
+                ResumeSecondActivityScreen(
                     initialState = initState.value,
-                    navigateToActivity2 = {
+                    navigateToActivity3 = {
                         startActivity(
-                            Intent(this, ResumeSecondActivity::class.java)
+                            Intent(this, ResumeThirdActivity::class.java)
                         )
                     },
-                    setInitStateToTrue = {
-                        initState.value = true
+                    returnToActivity1 = {
+                        finish()
                     },
                     setInitStateToFalse = {
                         CoroutineScope(Dispatchers.Main).launch {
