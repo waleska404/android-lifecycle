@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -18,11 +19,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.ui.R
-import com.waleska404.ui.components.CustomIconButtonEntryPoint
 
 @Composable
 fun HomeScreen(
-    navigateToActivityScreen: () -> Unit,
+    navigateToActivityScreen1: () -> Unit,
+    navigateToActivityScreen2: () -> Unit,
+    navigateToActivityScreen3: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -45,20 +47,51 @@ fun HomeScreen(
             maxLines = 2,
         )
         Spacer(modifier = Modifier.height(22.dp))
+        CollapsableLazyColumn(
+            modifier = Modifier.fillMaxHeight(),
+            sections = listOf(
+                CollapsableSection(
+                    title = stringResource(id = R.string.activity_lifecycle),
+                    rows = listOf(
+                        Subsection(
+                            title = "onCreate and onDestroy",
+                            onClick =  {
+                                navigateToActivityScreen1()
+                            }
+                        ),
+                        Subsection(
+                            title = "onStart and onStop",
+                            onClick = {
+                                navigateToActivityScreen2()
+                            }
+                        ),
+                        Subsection(
+                            title = "onResume and onPause",
+                            onClick = {
+                                navigateToActivityScreen3()
+                            }
+                        ),
+                    )
+                ),
+                CollapsableSection(
+                    title = stringResource(id = R.string.fragment_lifecycle),
+                    rows = listOf(
+                        Subsection(
+                            title = "onCreate and onDestroy",
+                            onClick = {}
+                        ),
+                        Subsection(
+                            title = "onStart and onStop",
+                            onClick = {}
+                        ),
+                        Subsection(
+                            title = "onResume and onPause",
+                            onClick = {}
+                        ),
+                    )
+                ),
+            ),
+        )
 
-        CustomIconButtonEntryPoint(
-            text = stringResource(id = R.string.activity_lifecycle),
-            onClick = navigateToActivityScreen,
-            iconResource = R.drawable.cycle,
-            iconDescriptionResource = R.string.cycle_icon,
-            modifier = Modifier.padding(8.dp),
-        )
-        CustomIconButtonEntryPoint(
-            text = stringResource(id = R.string.fragment_lifecycle),
-            onClick = { },
-            iconResource = R.drawable.cycle,
-            iconDescriptionResource = R.string.cycle_icon,
-            modifier = Modifier.padding(8.dp),
-        )
     }
 }

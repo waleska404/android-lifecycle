@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.waleska404.ui.R
 import com.waleska404.ui.components.CustomIconButton
+import com.waleska404.ui.theme.ContrastColorDark
 import com.waleska404.ui.theme.TransparentBlue
 
 @Composable
@@ -223,7 +224,7 @@ fun HeaderThirdScreen() {
             text = stringResource(id = R.string.activity_3_title),
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
-            color = MaterialTheme.colorScheme.secondary,
+            color = ContrastColorDark,
             modifier = Modifier.padding(8.dp),
             lineHeight = 30.sp,
             textAlign = TextAlign.Center,
@@ -239,7 +240,7 @@ fun HeaderThirdScreen() {
             text = stringResource(id = R.string.activity_3_subtitle),
             fontWeight = FontWeight.Bold,
             fontSize = 15.sp,
-            color = MaterialTheme.colorScheme.secondary,
+            color = ContrastColorDark,
             modifier = Modifier.padding(8.dp),
             lineHeight = 30.sp,
             textAlign = TextAlign.Center,
@@ -248,7 +249,7 @@ fun HeaderThirdScreen() {
     }
     Divider(
         thickness = 1.dp,
-        color = MaterialTheme.colorScheme.secondary
+        color = ContrastColorDark
     )
     Spacer(modifier = Modifier.height(22.dp))
 }
