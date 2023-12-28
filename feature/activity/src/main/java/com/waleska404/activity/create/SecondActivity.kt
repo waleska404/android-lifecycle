@@ -8,7 +8,7 @@ import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 class SecondActivity : AppCompatActivity() {
 
-    private val TAG = "MyActivity2"
+    private val TAG = "MYTAG - MyActivity2"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
