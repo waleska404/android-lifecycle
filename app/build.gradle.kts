@@ -74,4 +74,5 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":feature:home"))
     implementation(project(":feature:activity"))
+    implementation(project(":feature:fragment"))
 }

@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import com.waleska404.activity.create.FirstActivity
 import com.waleska404.activity.resume.ResumeFirstActivity
 import com.waleska404.activity.start.StartFirstActivity
+import com.waleska404.fragment.demonstration.FragmentLifecycleActivity
 import com.waleska404.home.navigation.homeRoute
 
 @Composable
@@ -37,7 +38,9 @@ fun SetupNavGraph(
                 )
             },
             navigateToFragmentScreen1 = {
-
+                context.startActivity(
+                    Intent(context, FragmentLifecycleActivity::class.java)
+                )
             }
         )
     }
