@@ -9,12 +9,14 @@ fun NavGraphBuilder.homeRoute(
     navigateToActivityScreen1: () -> Unit,
     navigateToActivityScreen2: () -> Unit,
     navigateToActivityScreen3: () -> Unit,
+    navigateToFragmentScreen1: () -> Unit,
 ) {
     composable(route = Screen.Home.route) {
         HomeScreen(
             navigateToActivityScreen1 = navigateToActivityScreen1,
             navigateToActivityScreen2 = navigateToActivityScreen2,
-            navigateToActivityScreen3 = navigateToActivityScreen3
+            navigateToActivityScreen3 = navigateToActivityScreen3,
+            navigateToFragmentScreen1 = navigateToFragmentScreen1,
         )
     }
 }

@@ -35,6 +35,9 @@ fun SetupNavGraph(
                 context.startActivity(
                     Intent(context, ResumeFirstActivity::class.java)
                 )
+            },
+            navigateToFragmentScreen1 = {
+
             }
         )
     }

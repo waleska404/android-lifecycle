@@ -25,6 +25,7 @@ fun HomeScreen(
     navigateToActivityScreen1: () -> Unit,
     navigateToActivityScreen2: () -> Unit,
     navigateToActivityScreen3: () -> Unit,
+    navigateToFragmentScreen1: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -78,7 +79,9 @@ fun HomeScreen(
                     rows = listOf(
                         Subsection(
                             title = "Fragment Lifecycle Demonstration",
-                            onClick = {}
+                            onClick = {
+                                navigateToFragmentScreen1()
+                            }
                         ),
                         Subsection(
                             title = "onStart and onStop",
