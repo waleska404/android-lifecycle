@@ -77,7 +77,7 @@ fun HomeScreen(
                     title = stringResource(id = R.string.fragment_lifecycle),
                     rows = listOf(
                         Subsection(
-                            title = "onCreate and onDestroy",
+                            title = "Fragment Lifecycle Demonstration",
                             onClick = {}
                         ),
                         Subsection(
