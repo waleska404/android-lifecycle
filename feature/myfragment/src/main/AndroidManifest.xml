@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".demonstration.FragmentLifecycleActivity"
+            android:name="com.waleska404.myfragment.demonstration.HostActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>

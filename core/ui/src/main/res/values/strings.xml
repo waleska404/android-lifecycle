@@ -13,6 +13,7 @@
     <string name="start_stop">onStart and onStop</string>
     <string name="resume_pause">onResume and onPause</string>
     <string name="activity_1_title">Activity 1</string>
+    <string name="activity_host_1_title">Activity Host for Fragments</string>
     <string name="activity_2_title">Activity 2</string>
     <string name="activity_3_title">Activity 3</string>
     <string name="activity_3_subtitle">This is a Transparent Activity</string>
@@ -36,4 +37,5 @@
     <string name="activity_2_state_destroyed">Destroyed</string>
     <string name="already_called">already called.</string>
     <string name="on_stop_not_executed">onStop() NOT executed because it is still visible</string>
+    <string name="add_fragment">Add Fragment</string>
 </resources>

@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/core/util" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/activity" />
+            <option value="$PROJECT_DIR$/feature/fragment" />
             <option value="$PROJECT_DIR$/feature/home" />
           </set>
         </option>
