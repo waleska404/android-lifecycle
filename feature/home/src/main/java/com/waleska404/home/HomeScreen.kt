@@ -78,17 +78,17 @@ fun HomeScreen(
                     title = stringResource(id = R.string.fragment_lifecycle),
                     rows = listOf(
                         Subsection(
-                            title = "Fragment Lifecycle Demonstration",
+                            title = "Lifecycle Demonstration",
                             onClick = {
                                 navigateToFragmentScreen1()
                             }
                         ),
                         Subsection(
-                            title = "onStart and onStop",
+                            title = "Fragments Back Stack",
                             onClick = {}
                         ),
                         Subsection(
-                            title = "onResume and onPause",
+                            title = "Fragment View Lifecycle",
                             onClick = {}
                         ),
                     )
