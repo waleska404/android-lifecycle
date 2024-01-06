@@ -10,8 +10,17 @@ class HostActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidLifecycleTheme {
-                ActivityHostScreen()
+                ActivityHostScreen(
+                    startFragment1 = { startFragment1() }
+                )
             }
         }
+    }
+
+    private fun startFragment1() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(android.R.id.content, Dem1Fragment())
+            .commit()
     }
 }

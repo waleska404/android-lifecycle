@@ -25,6 +25,7 @@ import com.waleska404.ui.components.CustomIconButton
 
 @Composable
 fun ActivityHostScreen(
+    startFragment1: () -> Unit,
 ) {
     Column(
         modifier = Modifier
@@ -58,7 +59,7 @@ fun ActivityHostScreen(
                 modifier = Modifier.fillMaxWidth().wrapContentHeight(),
                 text = stringResource(id = R.string.add_fragment),
                 onClick = {
-                    //TODO
+                    startFragment1()
                 },
                 iconResource = R.drawable.plus,
                 iconDescriptionResource = R.string.life_icon
