@@ -27,15 +27,18 @@
     <string name="activity_1_state">Activity 1:</string>
     <string name="activity_2_state">Activity 2:</string>
     <string name="activity_3_state">Activity 3:</string>
-    <string name="activity_1_state_value">onCreate()</string>
+    <string name="on_create">onCreate()</string>
     <string name="on_start">onStart()</string>
     <string name="on_stop">onStop()</string>
     <string name="on_destroy">onDestroy()</string>
     <string name="on_resume">onResume()</string>
     <string name="on_pause">onPause()</string>
+    <string name="on_create_view">onCreateView()</string>
+    <string name="on_view_created">onViewCreated()</string>
     <string name="activity_2_state_not_created">Not created yet</string>
     <string name="activity_2_state_destroyed">Destroyed</string>
     <string name="already_called">already called.</string>
     <string name="on_stop_not_executed">onStop() NOT executed because it is still visible</string>
     <string name="add_fragment">Add Fragment</string>
+    <string name="fragment_1_state">Fragment 1:</string>
 </resources>

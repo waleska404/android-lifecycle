@@ -92,7 +92,7 @@ fun InitialStateThirdScreen() {
                 )
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(
-                    text = stringResource(id = R.string.activity_1_state_value),
+                    text = stringResource(id = R.string.on_create),
                     color = MaterialTheme.colorScheme.outline,
                     fontWeight = FontWeight.Bold
                 )
@@ -123,7 +123,7 @@ fun InitialStateThirdScreen() {
                 )
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(
-                    text = stringResource(id = R.string.activity_1_state_value),
+                    text = stringResource(id = R.string.on_create),
                     color = MaterialTheme.colorScheme.outline,
                     fontWeight = FontWeight.Bold
                 )
@@ -170,7 +170,7 @@ fun InitialStateThirdScreen() {
                 )
                 Spacer(modifier = Modifier.width(5.dp))
                 Text(
-                    text = stringResource(id = R.string.activity_1_state_value),
+                    text = stringResource(id = R.string.on_create),
                     color = MaterialTheme.colorScheme.outline,
                     fontWeight = FontWeight.Bold
                 )

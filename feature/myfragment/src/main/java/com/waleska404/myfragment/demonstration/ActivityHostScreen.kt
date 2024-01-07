@@ -60,6 +60,7 @@ fun ActivityHostScreen(
                 text = stringResource(id = R.string.add_fragment),
                 onClick = {
                     startFragment1()
+                    //TODO: disable/enable button
                 },
                 iconResource = R.drawable.plus,
                 iconDescriptionResource = R.string.life_icon
