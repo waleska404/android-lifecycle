@@ -10,7 +10,7 @@ import androidx.compose.ui.platform.ComposeView
 import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 
-class Dem1Fragment : Fragment() {
+class Dem2Fragment : Fragment() {
 
     private val TAG = "MYTAG - Fragment1"
 
@@ -23,7 +23,7 @@ class Dem1Fragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 AndroidLifecycleTheme {
-                    Dem1FragmentScreen()
+                    Dem2FragmentScreen()
                 }
             }
         }
@@ -68,5 +68,4 @@ class Dem1Fragment : Fragment() {
         super.onDestroy()
         Log.d(TAG, "onDestroy")
     }
-
 }
