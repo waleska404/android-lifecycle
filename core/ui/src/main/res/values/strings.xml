@@ -32,6 +32,7 @@
     <string name="on_start">onStart()</string>
     <string name="on_stop">onStop()</string>
     <string name="on_destroy">onDestroy()</string>
+    <string name="on_destroy_view">onDestroyView()</string>
     <string name="on_resume">onResume()</string>
     <string name="on_pause">onPause()</string>
     <string name="on_create_view">onCreateView()</string>
@@ -43,4 +44,6 @@
     <string name="on_stop_not_executed">onStop() NOT executed because it is still visible</string>
     <string name="add_fragment">Add Fragment</string>
     <string name="fragment_1_state">Fragment 1:</string>
+    <string name="fragment_2_state">Fragment 2:</string>
+    <string name="remove_fragments">Remove Fragments</string>
 </resources>

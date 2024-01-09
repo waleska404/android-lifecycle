@@ -49,7 +49,7 @@ fun Dem2FragmentScreen() {
             Spacer(modifier = Modifier.height(12.dp))
             Text(
                 // TODO: use string resource
-                text = "Fragment 1",
+                text = "Fragment 2",
                 fontWeight = FontWeight.Bold,
                 fontSize = 30.sp,
                 color = MaterialTheme.colorScheme.secondary,
@@ -129,7 +129,7 @@ fun Dem2FragmentScreen() {
                             color = MaterialTheme.colorScheme.background
                         )
                     }
-                    // Activity 1
+                    // Fragment 1
                     Row(
                         verticalAlignment = Alignment.Bottom,
                         horizontalArrangement = Arrangement.Start
@@ -150,17 +150,248 @@ fun Dem2FragmentScreen() {
                             color = MaterialTheme.colorScheme.background
                         )
                     }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_start),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_resume),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_pause),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_stop),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 2
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_2_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_create),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 2
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_2_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_create_view),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 2
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_2_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_view_created),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 2
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_2_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_start),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_destroy_view),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_destroy),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 2
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_2_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_resume),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
                 }
             }
             Spacer(modifier = Modifier.height(22.dp))
             CustomIconButton(
                 modifier = Modifier.fillMaxWidth(),
-                text = stringResource(id = R.string.goto_fragment_2),
+                text = stringResource(id = R.string.remove_fragments),
                 onClick = {
                     //TODO: not implemented yet
                 },
                 iconResource = R.drawable.next,
-                iconDescriptionResource = R.string.life_icon
+                iconDescriptionResource = R.string.reset
             )
             Spacer(modifier = Modifier.height(22.dp))
         }
