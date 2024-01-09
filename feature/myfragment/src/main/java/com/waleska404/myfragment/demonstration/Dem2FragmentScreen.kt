@@ -40,7 +40,8 @@ fun Dem2FragmentScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(color = MaterialTheme.colorScheme.onSecondary, shape = RoundedCornerShape(20.dp))
+                //.background(color = MaterialTheme.colorScheme.onSecondary, shape = RoundedCornerShape(20.dp))
+                .background(color = Color.Magenta, shape = RoundedCornerShape(20.dp))
                 .padding(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top

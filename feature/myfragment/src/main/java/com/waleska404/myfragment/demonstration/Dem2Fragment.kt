@@ -12,7 +12,7 @@ import com.waleska404.ui.theme.AndroidLifecycleTheme
 
 class Dem2Fragment : Fragment() {
 
-    private val TAG = "MYTAG - Fragment1"
+    private val TAG = "MYTAG - Fragment2"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
