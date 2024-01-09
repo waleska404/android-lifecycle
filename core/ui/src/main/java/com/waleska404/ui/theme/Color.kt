@@ -15,7 +15,7 @@ val MainColorLight = Color(0xFFC2CCE4)
 val LightContrastColorLight = Color(0xFFE2EAFC)
 val ContrastColorLight = Color(0xFF171F2B)
 val SecondaryContrastColorLight = Color(0xFF1D292B)
-val AccentContentLight = Color(0xB94649FC)
+val AccentContentLight = Color(0xFF6A6DFF)
 val DisabledColorLight = Color(0xFF8A93A7)
 
 // shared

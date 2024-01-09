@@ -40,7 +40,7 @@ fun Dem1FragmentScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(color = Color.Gray, shape = RoundedCornerShape(20.dp))
+                .background(color = MaterialTheme.colorScheme.onSecondary, shape = RoundedCornerShape(20.dp))
                 .padding(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
@@ -103,7 +103,7 @@ fun Dem1FragmentScreen() {
                         )
                         Spacer(modifier = Modifier.width(5.dp))
                         Text(
-                            text = stringResource(id = R.string.already_called),
+                            text = stringResource(id = R.string.executed),
                             color = MaterialTheme.colorScheme.background
                         )
                     }
@@ -124,7 +124,7 @@ fun Dem1FragmentScreen() {
                         )
                         Spacer(modifier = Modifier.width(5.dp))
                         Text(
-                            text = stringResource(id = R.string.already_called),
+                            text = stringResource(id = R.string.executed),
                             color = MaterialTheme.colorScheme.background
                         )
                     }
@@ -145,7 +145,7 @@ fun Dem1FragmentScreen() {
                         )
                         Spacer(modifier = Modifier.width(5.dp))
                         Text(
-                            text = stringResource(id = R.string.already_called),
+                            text = stringResource(id = R.string.executed),
                             color = MaterialTheme.colorScheme.background
                         )
                     }
@@ -154,7 +154,7 @@ fun Dem1FragmentScreen() {
             Spacer(modifier = Modifier.height(22.dp))
             CustomIconButton(
                 modifier = Modifier.fillMaxWidth(),
-                text = stringResource(id = R.string.goto_activity_2),
+                text = stringResource(id = R.string.goto_fragment_2),
                 onClick = {
                     //TODO: not implemented yet
                 },

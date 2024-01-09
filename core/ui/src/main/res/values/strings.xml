@@ -18,6 +18,7 @@
     <string name="activity_3_title">Activity 3</string>
     <string name="activity_3_subtitle">This is a Transparent Activity</string>
     <string name="goto_activity_2">Go to Activity 2</string>
+    <string name="goto_fragment_2">Go to Fragment 2</string>
     <string name="goto_activity_3">Go to Activity 3</string>
     <string name="return_to_activity_1">Return to Activity 1</string>
     <string name="return_to_activity_2">Return to Activity 2</string>
@@ -38,6 +39,7 @@
     <string name="activity_2_state_not_created">Not created yet</string>
     <string name="activity_2_state_destroyed">Destroyed</string>
     <string name="already_called">already called.</string>
+    <string name="executed">executed.</string>
     <string name="on_stop_not_executed">onStop() NOT executed because it is still visible</string>
     <string name="add_fragment">Add Fragment</string>
     <string name="fragment_1_state">Fragment 1:</string>
