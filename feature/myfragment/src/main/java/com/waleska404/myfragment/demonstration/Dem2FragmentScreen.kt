@@ -30,7 +30,9 @@ import com.waleska404.ui.R
 import com.waleska404.ui.components.CustomIconButton
 
 @Composable
-fun Dem2FragmentScreen() {
+fun Dem2FragmentScreen(
+    closeFragments: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -388,9 +390,9 @@ fun Dem2FragmentScreen() {
                 modifier = Modifier.fillMaxWidth(),
                 text = stringResource(id = R.string.remove_fragments),
                 onClick = {
-                    //TODO: not implemented yet
+                    closeFragments()
                 },
-                iconResource = R.drawable.next,
+                iconResource = R.drawable.reset,
                 iconDescriptionResource = R.string.reset
             )
             Spacer(modifier = Modifier.height(22.dp))

@@ -23,10 +23,17 @@ class Dem2Fragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 AndroidLifecycleTheme {
-                    Dem2FragmentScreen()
+                    Dem2FragmentScreen(
+                        closeFragments = { closeFragments() }
+                    )
                 }
             }
         }
+    }
+
+    private fun closeFragments() {
+        Log.d("MYTAG", "closeFragments executed")
+        requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
