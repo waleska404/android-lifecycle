@@ -130,7 +130,7 @@ fun Dem1FragmentScreen(
                             color = MaterialTheme.colorScheme.background
                         )
                     }
-                    // Activity 1
+                    // Fragment 1
                     Row(
                         verticalAlignment = Alignment.Bottom,
                         horizontalArrangement = Arrangement.Start
@@ -142,6 +142,48 @@ fun Dem1FragmentScreen(
                         Spacer(modifier = Modifier.width(5.dp))
                         Text(
                             text = stringResource(id = R.string.on_view_created),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_start),
+                            color = MaterialTheme.colorScheme.outline,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.executed),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                    }
+                    // Fragment 1
+                    Row(
+                        verticalAlignment = Alignment.Bottom,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.fragment_1_state),
+                            color = MaterialTheme.colorScheme.background
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                        Text(
+                            text = stringResource(id = R.string.on_resume),
                             color = MaterialTheme.colorScheme.outline,
                             fontWeight = FontWeight.Bold
                         )
